@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 
-.header .more-info {
+.header__more-info {
   font-family: fantasy, cursive;
 }
 
@@ -28,13 +28,16 @@ body {
 
 }
 
-.main-centered {
+.main {
   display: block;
   width: 500px;
+}
+
+.main__centered {
   margin: 0 auto 0;
 }
 
-.task {
+.main__task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -146,17 +149,17 @@ li > input[type="text"] {
   width: 226px;
 }
 
-li > .delete:hover {
+.main__button_delete:hover {
   color: #cf2323;
 }
 
-.delete img {
+.main__button_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.main__button_delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -171,11 +174,11 @@ ul li input[type="text"] {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.main__edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode label {
+.main__edit-mode label {
   display: none;
 }

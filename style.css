@@ -35,14 +35,14 @@ body {
   display: flex;
 }
 .app__list {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 .app__list-item, .app__heading {
-  list-style:none;
+  list-style: none;
 }
 .app__task-input, .app__button{
-  outline:none;
+  outline: none;
 }
 .app__button {
   background: none;
@@ -134,14 +134,14 @@ input[type="text"]:focus {
 
 /* Edit Task */
 .app__task-input {
-  display:none
+  display: none
 }
 
 .app__list-item_edit .app__task-input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .app__list-item_edit .app__task-label {
-  display:none;
+  display: none;
 }

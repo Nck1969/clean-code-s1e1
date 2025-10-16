@@ -201,3 +201,9 @@ for (var i=0; i<completedTasksHolder.children.length;i++){
 //prevent creation of empty tasks.
 
 //Change edit to save when you are in edit mode.
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+});

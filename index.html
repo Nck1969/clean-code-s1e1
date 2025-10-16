@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Todo App</title>
     <link
@@ -15,73 +15,81 @@
     >
   </head>
   <body>
-    <div class="header">
-      <img class="header__image" src="./eisenhower-matrix.jpg">
+    <header class="header">
+      <img
+        class="header__image"
+        src="./eisenhower-matrix.jpg"
+        alt="Eisenhower Matrix showing how to make decisions based on urgent and important tasks: do, plan, delegate, or eliminate"
+      >
       <a
         class="header__link"
         href="https://goal-life.com/page/method/matrix-eisenhower"
       >Want more details?</a>
-    </div>
-    <div class="app__container">
-      <p id="app__header">
-        <label class="app__header__title" for="addTaskInput">Add Item</label>
-        <div class="app__header__content">
+    </header>
+    <main class="app__container">
+      <section id="app__header">
+        <form>
+          <label class="app__header__title" for="addTaskInput">Add Item</label>
           <input
             id="addTaskInput"
             class="app__header__input"
             type="text"
           >
-          <button class="app__button app__header__button">Add</button>
-        </div>
-      </p>
-      <h3 class="app__heading">Todo</h3>
-      <ul id="incompleted-tasks" class="app__list">
-        <li class="app__list-item">
-          <input class="app__task-checkbox" type="checkbox">
-          <label class="app__task-label">Pay Bills</label>
-          <input
-            type="text"
-            class="app__task-input"
-          >
-          <button class="app__button app__edit-button" >Edit</button>
-          <button class="app__button app__delete-button">
-            <img src="./remove.svg">
-          </button>
-        </li>
-        <li class="app__list-item app__list-item_edit">
-          <input class="app__task-checkbox" type="checkbox">
-          <label class="app__task-label">Go Shopping</label>
-          <input
-            type="text"
-            value="Go Shopping"
-            class="app__task-input"
-          >
-          <button class="app__button app__edit-button">Save</button>
-          <button class="app__button app__delete-button">
-            <img src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-      <h3 class="app__heading">Completed</h3>
-      <ul id="completed-tasks" class="app__list">
-        <li class="app__list-item">
-          <input
-            class="app__task-checkbox"
-            type="checkbox"
-            checked
-          >
-          <label class="app__task-label">See the Doctor</label>
-          <input
-            type="text"
-            class="app__task-input"
-          >
-          <button class="app__button app__edit-button">Edit</button>
-          <button class="app__button app__delete-button">
-            <img src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
+          <button class="app__button app__header__button" aria-label="Add new task">Add</button>
+        </form>
+      </section>
+      <section>
+        <h3 class="app__heading">Todo</h3>
+        <ul id="incompleted-tasks" class="app__list">
+          <li class="app__list-item">
+            <input type="checkbox" class="app__task-checkbox" id="task1">
+            <label for="task1" class="app__task-label">Pay Bills</label>
+            <input
+              type="text"
+              class="app__task-input"
+            >
+            <button class="app__button app__edit-button" aria-label="Edit task">Edit</button>
+            <button class="app__button app__delete-button" aria-label="Delete task">
+              <img src="./remove.svg" alt="Delete task icon">
+            </button>
+          </li>
+          <li class="app__list-item app__list-item_edit">
+            <input class="app__task-checkbox" type="checkbox">
+            <label class="app__task-label">Go Shopping</label>
+            <input
+              type="text"
+              value="Go Shopping"
+              class="app__task-input"
+            >
+            <button class="app__button app__edit-button" aria-label="Save task">Save</button>
+            <button class="app__button app__delete-button" aria-label="Delete task">
+              <img src="./remove.svg" alt="Delete task icon">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="app__heading">Completed</h3>
+        <ul id="completed-tasks" class="app__list">
+          <li class="app__list-item">
+            <input
+              class="app__task-checkbox"
+              type="checkbox"
+              checked
+            >
+            <label class="app__task-label">See the Doctor</label>
+            <input
+              type="text"
+              class="app__task-input"
+            >
+            <button class="app__button app__edit-button" aria-label="Edit task">Edit</button>
+            <button class="app__button app__delete-button" aria-label="Delete task">
+              <img src="./remove.svg" alt="Delete task icon">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>

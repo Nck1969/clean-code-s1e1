@@ -17,6 +17,8 @@ var completedTasksHolder=document.getElementById("completed-tasks");//ul of #com
 //New task list item
 var createNewTaskElement=function(taskString){
 
+  var taskId = 'task-' + Date.now(); // уникальный ID
+
   var listItem=document.createElement("li");
 
   //input (checkbox)
@@ -34,10 +36,13 @@ var createNewTaskElement=function(taskString){
 
   listItem.className="app__list-item";
 
+
+  label.htmlFor = taskId;
   label.innerText=taskString;
   label.className='app__task-label';
 
   //Each elements, needs appending
+  checkBox.id = taskId;
   checkBox.type="checkbox";
   checkBox.className="app__task-checkbox";
   editInput.type="text";
